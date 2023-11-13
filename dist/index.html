@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <style>
+      body {
+        background-color: black;
+        overflow: hidden;
+      }
+      #background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+      .p-relative{
+        position: relative;
+      }
+      .canvas{
+        position: absolute;
+        top: 0px;
+        z-index: 999;
+      }
+      .btnContainer{
+        position: absolute;
+        top: calc(50vh - 25px);
+        height: 0px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 999999999;
+        /* display: none; */
+      }
+      .prev{
+        padding-left: 150px;
+        cursor: pointer;
+      }
+      .next{
+        padding-right: 150px;
+        cursor: pointer;
+      }
+      .heroSection{
+        position: relative;
+        height: 100vh;
+      }
+      .back{
+        position: absolute;
+        bottom: 50px;
+        right:50px;
+        cursor: pointer;
+        z-index: 999
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-cc45afd9.js"></script>
+  </head>
+  <body>
+    <div class="p-relative">
+      <video id="background-video" loop autoplay muted>
+        <source src="/assets/bg-efbb94e7.mp4" type="video/mp4" />
+      </video>
+      <div class="btnContainer">
+        <div class="prev"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFZ0lEQVR4nO3cT4hdVx0H8E9eJpbCCOPCIhHywys004SCkHalKWlIu6kWU9yFJNZFAsFFsxCK0hpSCIhCFCTQLKxpmJ0kUnFTgxZjV00gUDLJCN5wAgb/LBzogNQQ6+KcDC9jOvPmvfv+zLz5Lt+79/f7fn/87jnn/s7v3E0GgCpiEs/gSUxjO7ZiCpPYjHtYwDzuYA438SH+WKe00G+em/pluIp4HAfwPJ7CLK7KAudwWxa+gLvYIgdmCtvkgE1jF3bgCt7FTJ3Sn/vBudFgVBGP4jBexk5cxDt4r07pnz3Y/Tz24EXsx3W8hXN1Sv/ukfYiGglGeQyO4TgSzuBCP1K7+Hqp+AucxpkmfPUUjCpiEw7ix7iBk3VKv++V1Cr878XreALfw/k6pU+6tdd1MKqIabwpP9/frVP6bbe2ekUV8QJ+Lo9DR+uUbnZjp9Wl86P4AO9jxzADAcX/jsLng8Jv1VhVZlQRj+AsnsOBOqU/dOO0n6ginsUMfocjdUofd3pvx8GoIqbwG3yCb9Up/WOVPAeGKuIx/ErW9406pflO7uvoMSlT22X8FftGORBQ+O2T+V4u/FfEiplRMuIyruHbdUr3uqc5WFQRm/FLfAW7V8qQZYNRxohLcoQPrKVA3EcJyAy+KGf1p44hKz0mZ+Ux4tBaDAQU3odkHWe7MlJFHK0i7pTBaM2jinis6FndtFtFTFcRH5Vpat2gini26Jp+2P//N2aUJfZ7eL9O6ft95jdwVBGn8FXsWbp0f9iYcVBeYr8xAG7DwBuyvoPLXlVFTFYRfy9r/XWLKuKFonOy/felmXEMN4b9rtFvFH03ZL2LWAxGKcwcx8nBUhsaTuJ40Y0HM+Mw0iDrEcNE0Zlk3XgwGC/LFapxwhlZN0owSvF2Jy4MidSwcAE7i/7FzDiAi4Mox48Sit6Lsv7FYDwvV7HHEe/I+m0qc+2/sLWXcv5aRal13MHnWvJO1+w4BgKK7lk805K3/K4Ol9LQcRVPtuQtvK5K66tBFdFVJX5AuInplrynOdcvL1XEF6qIX+Dr/fLRAOawfULeDb/dtPVSMnwFP8BnjfZsdRtbJ+Rd7/kmLVcR38RP8OUm7fYR85iakNsAGllsVRE78VO5TL+WsIDJCblR5G6v1qqIr8mV9Ec6vP4EftirX/ysTumVHm3cxeYJuWNmS6+M6pT+VEXs0mFm1CmdwIle/TaELbjXUlKkCYt1StfrlJ6TG0r+0oTNAWESCy1l8GjScp3Sr+W34FfxUZO2+4QpzLfkdfm2pq3XKX1cp/QjPC63HP23aR8NYhvuTCgLjn55qVP6G74z4ivQ7ZhrKUvRfnurUxrlzJjGzZbcZ7lryGSGjV34cKOe0V7PKKWvK3Kf5ThiD67UKS3cH9TelRtOxxEvyvoXa6Az2L90u229o+jdL+vPwSi92Nflzttxwku4fr8XvX3uf8uSvccxwDFZNx4MxjlEaUFe9yg6Q9aNtmCU7vzTci/2OOB1nG4/lbB0iXwGT4xDf4bcfL/83nIVcaiKuNW+Vb+eUEU8WvQdWvrfw16ezssF0tf6zmw4eE3Wd76jq8e122+5G8euD3Sldulz+JLcZvyfpgkOClXEZ+Ri9a06pcOfdt1KBZcjcsDeLj3Yaw6F99uyjiPLXbtxqqANK5biioG9xeBMSbmRR+E5I/Pe28kBnI7qkqXos1s+pnBp1AfVwu+SzHd3p0Wrjou0JbL7cAvXRnXaLbyuyTz3dXokqxeHR8t8fWpUVqplZXmq8Orq9GJX5fs6pTfxtNydPzvsd5nif7bwebrwWzU2Tjy3YeMsfBs2vpLQho3vZ7Shb8Fox1r5ssr/AFFUBzudeSesAAAAAElFTkSuQmCC"/></div>
+        <div class="next"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFZ0lEQVR4nO3cT4iV5xXH8Y/XsSUwhemioRjw0LdQJ9pAwWYVDEam2eQPNXQnarJRkEIjtJQWEhJDpdCFWRQhboyR2QUNSbtJpA21WUWpkDo6gb7yCJX+WXQgA6UVkyyex+E6MTP3/52ZO9/lzHvP+Z3Dc5/3ec85791gAFQR43gUD2ESW7EZExjHRtzGPOZwE7O4ho/wpzql+X7r3NAvw1XEd7AXj+P7mMElOcBZ3JADn8ctbJITM4EtcsImsQPbcBHvYrpO6eN+aO5pMqqI+3AAz2E7zuFtvF+n9O8u7H4Du/A09uAKTuF0ndJ/u5S9QE+SUb4Gh3EECSdwth9Lu/h6pvgLHMeJXvjqKhlVxAbsw29wFUfrlP7Qrag2/O/Gi3gQP8OZOqXPOrXXcTKqiEm8Jn+/f1yn9PtObXVLFfEEfivvQ4fqlK51YqfRofND+BAfYNswEwHF/7ai58Oir23aWhlVxFdxEj/A3jqlP3bitJ9UEY9hGu/hYJ3S/1r9bMvJqCIm8A4+w4/qlP7Vps6BUUXcjzfl+J6qU5pr5XMtfU3Kre0C/o6plZwIKPqmZL0Xiv5lWXZllBVxAZfxbJ3S7c5lDpYqYiNex/ewc7kVsmQyyh5xXs7w3tWUiDuUhEzjAXlVf+kestzX5KS8R+xfjYmAonu/HMfJjoxUEYeqiJtlM1r1VBH3l3jau+1WEZNVxCflNrVmqCIeK3FN3uv/X9gzyhH7fXxQp/TLPusbOFXEMTyCXYuP7vfaM/bJR+xXBqBtGLwix7dvyauqiPEq4p/lrL9mqSKeKHGON/998co4jKvDftboNyW+q3K8CywkoxRmjuDoYKUNjaM4UuLG3SvjANIg6xHDpMSZ5LhxdzKekytUo8QJOW6UZJTi7XacHZKoYXEW20v8CytjL84Nohy/kijxnpPjX0jG43IVexR5W47fhnKv/Q82d1POX62UWsdNfL0hd7pmRjERUOKewaMNueV3abiShs4lPNSQW3gdldYHQRXRUQW/Ta5hsiH3NGcH4LBTnqwiTlUR3+yjj1lsbcjd8Bt9dNQtDTyLj6uIn5dSZK+5gc0Nues91wcHveZr+DWuVBE/7LHtOUw05DGA1XTY+jbOVRHvVRHf7ZHNeYyPyYMit7q1VkW8ip90awcv1ym91MJ1U7hYRUzVKf25S5+3sHFMnpjZ1KUxdUrP4/lu7bTBeRypU/prD2xtwu0xZYlgtRy6/oaf1im91UOb45gfUzaPHhruF5/gV3i1nWZyi0xgbkw+l2/BX3rsoFd8KrcIf1Gn9I8++diCm2PKgaNPTnrB7+qU+v1EvRWzDeUo2mdnHVOn9OkA3EziWkOes9wxAIcrmR34aL2e0VzPKKWvi/Kc5SiyCxfrlObvPB6/Kw+cjiJPy/Ev1ECnsWdxu22tU+LdI8efk1Fmsa/Ik7ejxDO4cmcWvbmKdMqi3uMIcFiOG3cn4zSijCCveUqcIceNpmSU6fzj8iz2KPAijje/lbC42HoCD47CfIY8fL90b7mK2F9FXG9u1a8lqoj7Snz7F//vXmX4M3KB9IW+KxsOL8jxnWnp6lGd9lvqgyM3B7rcuPRpfEseM/5/rwUOiiriK3LN9Hqd0oEvu2651t1BOWFvlBnsVUfR/YYcx8Glrl1/q6CJZZu6xcDuYnC6LLkVT9E5Leve3coLOC11uEvRZ6f8msL5lb6pFn3nZb07Wy1atdzuL5mdwnVcXqm33aLrsqxzqtVXsrpxeKjcr4+tlJNqOVkeK7o6enuxo0GQOqXX8LA8nT8z7GeZ4n+m6Hm46Gub9Teem1h/F76J9V9JaGL99zOa6Fsymlktv6zyORAeCUvM6uncAAAAAElFTkSuQmCC"/></div>
+      </div>
+      <div class="heroSection">
+        <canvas class="canvas"></canvas>
+      </div>
+      <div class="back">Back</div>
+    </div>
+    
+  </body>
+</html>
