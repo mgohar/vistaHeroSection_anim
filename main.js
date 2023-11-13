@@ -155,7 +155,7 @@ const Init = (bgScene) => {
   //===================================================== CONTEPORARY PODIUM
   contemporary = new THREE.Group();
   const contemporaryPodiumTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/podium.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/podium.png`
   );
   const contemporaryPodiumGeo = new THREE.BoxGeometry(6, 0.5, 0);
   const contemporaryPodiumMat = new THREE.ShaderMaterial({
@@ -180,7 +180,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY CHAIR
   const contemporaryChairTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/Armchair.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/armchair.png`
   );
   const contemporaryChairGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryChairMat = new THREE.ShaderMaterial({
@@ -203,7 +203,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY LAMP
   const contemporaryLampTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/lamp.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/lamp.png`
   );
   const contemporaryLampGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryLampMat = new THREE.ShaderMaterial({
@@ -226,7 +226,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY DESK
   const contemporaryDeskTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/Desk.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/desk.png`
   );
   const contemporaryDeskGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryDeskMat = new THREE.ShaderMaterial({
@@ -249,7 +249,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Plant
   const contemporaryPlantTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/Plant.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/plant.png`
   );
   const contemporaryPlantGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryPlantMat = new THREE.ShaderMaterial({
@@ -272,7 +272,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Ball 1
   const contemporaryBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/ball1.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/ball1.png`
   );
   const contemporaryBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryBallMat = new THREE.ShaderMaterial({
@@ -295,7 +295,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Ball 1
   const contemporaryBall2Texture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/ball2.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/ball2.png`
   );
   const contemporaryBall2Geo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryBall2Mat = new THREE.ShaderMaterial({
@@ -318,7 +318,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const contemporaryHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/halfBall.png`
   );
   const contemporaryHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryHalfBallMat = new THREE.ShaderMaterial({
@@ -351,7 +351,7 @@ const Init = (bgScene) => {
   //===================================================== CONTEPORARY PODIUM
   minimalist = new THREE.Group();
   const minimalistPodiumTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/shadowPodium.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/shadowPodium.png`
   );
   const minimalistPodiumGeo = new THREE.BoxGeometry(6, 0.5, 0);
   const minimalistPodiumMat = new THREE.ShaderMaterial({
@@ -373,7 +373,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY CHAIR
   const minimalistChairTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/Armchair.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/armchair.png`
   );
   const minimalistChairGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistChairMat = new THREE.ShaderMaterial({
@@ -396,7 +396,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY LAMP
   const minimalistLampTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/lamp.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/lamp.png`
   );
   const minimalistLampGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistLampMat = new THREE.ShaderMaterial({
@@ -416,7 +416,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY DESK
   const minimalistDeskTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/Desk.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/desk.png`
   );
   const minimalistDeskGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistDeskMat = new THREE.ShaderMaterial({
@@ -436,7 +436,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Plant
   const minimalistPlantTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/Plant.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/plant.png`
   );
   const minimalistPlantGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistPlantMat = new THREE.ShaderMaterial({
@@ -459,7 +459,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Ball 1
   const minimalistBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/ball1.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/ball1.png`
   );
   const minimalistBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistBallMat = new THREE.ShaderMaterial({
@@ -479,7 +479,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Ball 1
   const minimalistBall2Texture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/ball2.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/ball2.png`
   );
   const minimalistBall2Geo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistBall2Mat = new THREE.ShaderMaterial({
@@ -502,7 +502,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const minimalistHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/halfBall.png`
   );
   const minimalistHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistHalfBallMat = new THREE.ShaderMaterial({
@@ -534,7 +534,7 @@ const Init = (bgScene) => {
   //===================================================== CONTEPORARY PODIUM
   modern = new THREE.Group();
   const modernPodiumTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/modern/${bgScene}/shadowPodium.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/shadowPodium.png`
   );
   const modernPodiumGeo = new THREE.BoxGeometry(6, 0.5, 0);
   const modernPodiumMat = new THREE.ShaderMaterial({
@@ -553,7 +553,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY CHAIR
   const modernChairTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/modern/${bgScene}/Armchair.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/armchair.png`
   );
   const modernChairGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const modernChairMat = new THREE.ShaderMaterial({
@@ -573,7 +573,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY LAMP
   const modernLampTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/modern/${bgScene}/lamp.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/lamp.png`
   );
   const modernLampGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const modernLampMat = new THREE.ShaderMaterial({
@@ -593,7 +593,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY DESK
   const modernDeskTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/modern/${bgScene}/Desk.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/desk.png`
   );
   const modernDeskGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const modernDeskMat = new THREE.ShaderMaterial({
@@ -613,7 +613,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Plant
   const modernPlantTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/modern/${bgScene}/Plant.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/plant.png`
   );
   const modernPlantGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const modernPlantMat = new THREE.ShaderMaterial({
@@ -633,7 +633,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Ball 2
   const modernBall2Texture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/modern/${bgScene}/ball2.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/ball2.png`
   );
   const modernBall2Geo = new THREE.BoxGeometry(5, 0.5, 0);
   const modernBall2Mat = new THREE.ShaderMaterial({
@@ -653,7 +653,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const modernHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/modern/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/halfBall.png`
   );
   const modernHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const modernHalfBallMat = new THREE.ShaderMaterial({
@@ -684,7 +684,7 @@ const Init = (bgScene) => {
   //===================================================== CONTEPORARY PODIUM
   scandinavian = new THREE.Group();
   const scandinavianPodiumTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/scandinavian/${bgScene}/shadowPodium.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/shadowPodium.png`
   );
   const scandinavianPodiumGeo = new THREE.BoxGeometry(6, 0.5, 0);
   const scandinavianPodiumMat = new THREE.ShaderMaterial({
@@ -706,7 +706,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY CHAIR
   const scandinavianChairTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/scandinavian/${bgScene}/Armchair.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/armchair.png`
   );
   const scandinavianChairGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const scandinavianChairMat = new THREE.ShaderMaterial({
@@ -729,7 +729,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY LAMP
   const scandinavianLampTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/scandinavian/${bgScene}/lamp.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/lamp.png`
   );
   const scandinavianLampGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const scandinavianLampMat = new THREE.ShaderMaterial({
@@ -752,7 +752,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY DESK
   const scandinavianDeskTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/scandinavian/${bgScene}/Desk.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/desk.png`
   );
   const scandinavianDeskGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const scandinavianDeskMat = new THREE.ShaderMaterial({
@@ -775,7 +775,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Plant
   const scandinavianPlantTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/scandinavian/${bgScene}/Plant.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/plant.png`
   );
   const scandinavianPlantGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const scandinavianPlantMat = new THREE.ShaderMaterial({
@@ -798,7 +798,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Ball 2
   const scandinavianBall2Texture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/scandinavian/${bgScene}/ball2.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/ball2.png`
   );
   const scandinavianBall2Geo = new THREE.BoxGeometry(5, 0.5, 0);
   const scandinavianBall2Mat = new THREE.ShaderMaterial({
@@ -821,7 +821,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const scandinavianHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/scandinavian/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/halfBall.png`
   );
   const scandinavianHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const scandinavianHalfBallMat = new THREE.ShaderMaterial({
@@ -876,7 +876,7 @@ const InitLight = (bgScene) => {
   //===================================================== CONTEPORARY PODIUM
   contemporaryL = new THREE.Group();
   const contemporaryPodiumTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/shadowPodium.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/shadowPodium.png`
   );
   const contemporaryPodiumGeo = new THREE.BoxGeometry(6, 0.5, 0);
   const contemporaryPodiumMat = new THREE.ShaderMaterial({
@@ -901,7 +901,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY CHAIR
   const contemporaryChairTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/Armchair.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/armchair.png`
   );
   const contemporaryChairGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryChairMat = new THREE.ShaderMaterial({
@@ -924,7 +924,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY LAMP
   const contemporaryLampTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/lamp.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/lamp.png`
   );
   const contemporaryLampGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryLampMat = new THREE.ShaderMaterial({
@@ -947,7 +947,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY DESK
   const contemporaryDeskTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/Desk.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/desk.png`
   );
   const contemporaryDeskGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryDeskMat = new THREE.ShaderMaterial({
@@ -970,7 +970,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Plant
   const contemporaryPlantTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/Plant.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/plant.png`
   );
   const contemporaryPlantGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryPlantMat = new THREE.ShaderMaterial({
@@ -993,7 +993,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Ball 1
   const contemporaryBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/ball1.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/ball1.png`
   );
   const contemporaryBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryBallMat = new THREE.ShaderMaterial({
@@ -1016,7 +1016,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Ball 1
   const contemporaryBall2Texture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/ball2.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/ball2.png`
   );
   const contemporaryBall2Geo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryBall2Mat = new THREE.ShaderMaterial({
@@ -1039,7 +1039,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const contemporaryHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/contemporary/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/halfBall.png`
   );
   const contemporaryHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryHalfBallMat = new THREE.ShaderMaterial({
@@ -1072,7 +1072,7 @@ const InitLight = (bgScene) => {
   //===================================================== CONTEPORARY PODIUM
   minimalistL = new THREE.Group();
   const minimalistPodiumTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/shadowPodium.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/shadowPodium.png`
   );
   const minimalistPodiumGeo = new THREE.BoxGeometry(6, 0.5, 0);
   const minimalistPodiumMat = new THREE.ShaderMaterial({
@@ -1094,7 +1094,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY CHAIR
   const minimalistChairTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/Armchair.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/armchair.png`
   );
   const minimalistChairGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistChairMat = new THREE.ShaderMaterial({
@@ -1117,7 +1117,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY LAMP
   const minimalistLampTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/lamp.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/lamp.png`
   );
   const minimalistLampGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistLampMat = new THREE.ShaderMaterial({
@@ -1137,7 +1137,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY DESK
   const minimalistDeskTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/Desk.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/desk.png`
   );
   const minimalistDeskGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistDeskMat = new THREE.ShaderMaterial({
@@ -1157,7 +1157,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Plant
   const minimalistPlantTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/Plant.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/plant.png`
   );
   const minimalistPlantGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistPlantMat = new THREE.ShaderMaterial({
@@ -1180,7 +1180,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Ball 1
   const minimalistBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/ball1.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/ball1.png`
   );
   const minimalistBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistBallMat = new THREE.ShaderMaterial({
@@ -1200,7 +1200,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Ball 1
   const minimalistBall2Texture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/ball2.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/ball2.png`
   );
   const minimalistBall2Geo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistBall2Mat = new THREE.ShaderMaterial({
@@ -1223,7 +1223,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const minimalistHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/minimalist/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/halfBall.png`
   );
   const minimalistHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistHalfBallMat = new THREE.ShaderMaterial({
@@ -1255,7 +1255,7 @@ const InitLight = (bgScene) => {
   //===================================================== CONTEPORARY PODIUM
   modernL = new THREE.Group();
   const modernPodiumTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/modern/${bgScene}/shadowPodium.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/shadowPodium.png`
   );
   const modernPodiumGeo = new THREE.BoxGeometry(6, 0.5, 0);
   const modernPodiumMat = new THREE.ShaderMaterial({
@@ -1274,7 +1274,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY CHAIR
   const modernChairTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/modern/${bgScene}/Armchair.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/armchair.png`
   );
   const modernChairGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const modernChairMat = new THREE.ShaderMaterial({
@@ -1294,7 +1294,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY LAMP
   const modernLampTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/modern/${bgScene}/lamp.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/lamp.png`
   );
   const modernLampGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const modernLampMat = new THREE.ShaderMaterial({
@@ -1314,7 +1314,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY DESK
   const modernDeskTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/modern/${bgScene}/Desk.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/desk.png`
   );
   const modernDeskGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const modernDeskMat = new THREE.ShaderMaterial({
@@ -1334,7 +1334,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Plant
   const modernPlantTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/modern/${bgScene}/Plant.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/plant.png`
   );
   const modernPlantGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const modernPlantMat = new THREE.ShaderMaterial({
@@ -1354,7 +1354,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Ball 2
   const modernBall2Texture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/modern/${bgScene}/ball2.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/ball2.png`
   );
   const modernBall2Geo = new THREE.BoxGeometry(5, 0.5, 0);
   const modernBall2Mat = new THREE.ShaderMaterial({
@@ -1374,7 +1374,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const modernHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/modern/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/halfBall.png`
   );
   const modernHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const modernHalfBallMat = new THREE.ShaderMaterial({
@@ -1405,7 +1405,7 @@ const InitLight = (bgScene) => {
   //===================================================== CONTEPORARY PODIUM
   scandinavianL = new THREE.Group();
   const scandinavianPodiumTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/scandinavian/${bgScene}/shadowPodium.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/shadowPodium.png`
   );
   const scandinavianPodiumGeo = new THREE.BoxGeometry(6, 0.5, 0);
   const scandinavianPodiumMat = new THREE.ShaderMaterial({
@@ -1427,7 +1427,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY CHAIR
   const scandinavianChairTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/scandinavian/${bgScene}/Armchair.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/armchair.png`
   );
   const scandinavianChairGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const scandinavianChairMat = new THREE.ShaderMaterial({
@@ -1450,7 +1450,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY LAMP
   const scandinavianLampTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/scandinavian/${bgScene}/lamp.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/lamp.png`
   );
   const scandinavianLampGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const scandinavianLampMat = new THREE.ShaderMaterial({
@@ -1473,7 +1473,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY DESK
   const scandinavianDeskTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/scandinavian/${bgScene}/Desk.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/desk.png`
   );
   const scandinavianDeskGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const scandinavianDeskMat = new THREE.ShaderMaterial({
@@ -1496,7 +1496,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Plant
   const scandinavianPlantTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/scandinavian/${bgScene}/Plant.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/plant.png`
   );
   const scandinavianPlantGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const scandinavianPlantMat = new THREE.ShaderMaterial({
@@ -1519,7 +1519,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Ball 2
   const scandinavianBall2Texture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/scandinavian/${bgScene}/ball2.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/ball2.png`
   );
   const scandinavianBall2Geo = new THREE.BoxGeometry(5, 0.5, 0);
   const scandinavianBall2Mat = new THREE.ShaderMaterial({
@@ -1542,7 +1542,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const scandinavianHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.1/src/assets/images/scandinavian/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/halfBall.png`
   );
   const scandinavianHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const scandinavianHalfBallMat = new THREE.ShaderMaterial({
