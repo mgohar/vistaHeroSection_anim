@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <style>
+      body {
+        background-color: black;
+        overflow: hidden;
+      }
+      #background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+      .p-relative{
+        position: relative;
+      }
+      .canvas{
+        position: absolute;
+        top: 0px;
+        z-index: 999;
+      }
+      .btnContainer{
+        position: absolute;
+        top: calc(50vh - 25px);
+        height: 0px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 999999999;
+        /* display: none; */
+      }
+      .prev{
+        padding-left: 150px;
+        cursor: pointer;
+      }
+      .next{
+        padding-right: 150px;
+        cursor: pointer;
+      }
+      .heroSection{
+        position: relative;
+        height: 100vh;
+      }
+      .back{
+        position: absolute;
+        bottom: 50px;
+        right:50px;
+        cursor: pointer;
+        z-index: 999
+      }
+    </style>
+  </head>
+  <body>
+    <div class="p-relative">
+      <video id="background-video" loop autoplay muted>
+        <source src="./src/assets/video/bg.mp4" type="video/mp4" />
+      </video>
+      <div class="btnContainer">
+        <div class="prev"><img src="./src/assets/images/left_arrow.png"/></div>
+        <div class="next"><img src="./src/assets/images/right_arrow.png"/></div>
+      </div>
+      <div class="heroSection">
+        <canvas class="canvas"></canvas>
+      </div>
+      <div class="back">Back</div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
