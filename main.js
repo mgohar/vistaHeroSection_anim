@@ -46,6 +46,7 @@ let canvas,
   minimalistL,
   modernL,
   scandinavianL;
+
 canvas = document.querySelector(".canvas");
 //===================================================== Create a WebGL renderer
 var renderer = new THREE.WebGLRenderer({
@@ -1823,12 +1824,14 @@ nextbtn.addEventListener("click", () => {
   setTimeout(() => {
     prevData = [];
     MoveNext();
+    SwipeAudio();
   }, 300);
 });
 prevbtn.addEventListener("click", () => {
   setTimeout(() => {
     prevData = [];
     MovePref();
+    SwipeAudio()
   }, 300);
 });
 //===================================================== Move Pref
@@ -1847,6 +1850,8 @@ scene.add(ActiveBox);
 let lightScenes = [contemporaryL, scandinavianL, modernL, minimalistL];
 
 let witoutLightScenes = [contemporary, scandinavian, modern, minimalist];
+let lightAudioToggle=0;
+let BGAudioToggle=0;
 window.addEventListener("mousemove", function (event) {
   var mouse = new THREE.Vector2(
     (event.clientX / window.innerWidth) * 2 - 1,
@@ -1859,12 +1864,18 @@ window.addEventListener("mousemove", function (event) {
   var intersects = raycaster.intersectObject(ActiveBox, true);
 
   if (intersects.length > 0) {
+   
     lightScenes[activeScene].children.forEach((child) => {
       gsap.to(child.material.uniforms.opacity, {
         value: 1,
         duration: 0.8,
       });
     });
+    if(lightAudioToggle==0){
+      LightAudio();
+      BGAudio()
+      lightAudioToggle=1;
+    }
     ElivateObjects("ball1", witoutLightScenes[activeScene], 5, 0.3, 0.8);
     ElivateObjects("bitBall", witoutLightScenes[activeScene], 6, 0.5, 1.3);
     ElivateObjects("halfball", witoutLightScenes[activeScene], 7, 0.2, 1.5);
@@ -1877,6 +1888,7 @@ window.addEventListener("mousemove", function (event) {
     // ElivateObjects("deskL", lightScenes[activeScene], 3, 0.5, 1.4, 0.2);
     ElivateObjects("plantL", lightScenes[activeScene], 4, 0.5, 1.2, 0.1);
   } else {
+    lightAudioToggle=0;
     DeElivateObjects("ball1", 0.8);
     DeElivateObjects("bitBall", 0.8);
     DeElivateObjects("halfball", 0.8);
@@ -1987,3 +1999,18 @@ learnMore.addEventListener("click", () => {
     prevbtn.style.display = "none";
   }, 600);
 });
+
+function SwipeAudio() {
+  var audio = document.getElementById("SwipeAudio");
+  setTimeout(() => {
+    audio.play();
+  }, 0);
+}
+function LightAudio() {
+  var audio = document.getElementById("LightAudio");
+  audio.play();
+}
+function BGAudio() {
+  var audio = document.getElementById("BGAudio");
+  audio.play();
+}

@@ -34,7 +34,6 @@
         align-items: center;
         justify-content: space-between;
         z-index: 999999999;
-        /* display: none; */
       }
       .prev{
         padding-left: 150px;
@@ -59,11 +58,58 @@
     z-index: 999;
     cursor: pointer;
     position: absolute;
-    bottom: 60px;
+    bottom: 40px;
+    font-size: 16px!important;
     left: calc(50% - 50px);
-    width: 100px;
-    background: red;
-    text-align: center;
+    border: 1px solid black;
+    padding: 0px 40px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    color: black;
+}
+.inner-Button {
+    z-index: 999999;
+    cursor: pointer;
+    left: calc(50% - 50px);
+    border: 1px solid black;
+    padding: 0px 40px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px!important;
+}
+.interiorTitle {
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 60px;
+    font-family: 'League Spartan';
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 80px;
+    text-shadow: 5px 5px 15px #FFFFFF;
+}
+#interiorDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family:'League Spartan';
+    color: black;
+    row-gap: 20px!important;
+    padding: 60px;
+    font-weight: 300;
+    height: 80vh;
+    width: 30%;
 }
     </style>
   </head>
@@ -73,20 +119,38 @@
         <source src="./src/assets/video/bg.mp4" type="video/mp4" />
       </video>
       <div class="btnContainer">
-        <div class="prev"><img src="./src/assets/images/left_arrow.png"/></div>
-        <div class="next"><img src="./src/assets/images/right_arrow.png"/></div>
+        <div class="prev"><img src="./src/assets/images/left_arrow.png" /></div>
+        <div class="next">
+          <img src="./src/assets/images/right_arrow.png" />
+        </div>
       </div>
       <div class="heroSection">
         <div id="interiorDetails">
           <h1 id="interiorDetailHeading">adsfasfdsaf</h1>
-          <p id="interiorDetailParagraph">twrtret ertwret ret e tre rtre tre t t ret</p>
+          <p id="interiorDetailParagraph">
+            twrtret ertwret ret e tre rtre tre t t ret
+          </p>
         </div>
         <h1 class="interiorTitle">Contemporary</h1>
         <canvas class="canvas"></canvas>
         <div class="learnMore">Continue</div>
       </div>
       <div class="back">Back</div>
+      <audio id="SwipeAudio">
+        <source src="./src/assets/Music/whoosh_edit.mp3" type="audio/mp3" />
+      </audio>
+      <audio id="LightAudio">
+        <source src="./src/assets/Music/light-switch.mp3" type="audio/mp3" />
+      </audio>
+      <audio id="BGAudio">
+        <source src="./src/assets/Music/maditation.mp3" type="audio/mp3" />
+      </audio>
+      
     </div>
     <script type="module" src="/main.js"></script>
+    <script>
+      // Function to play the audio
+      
+    </script>
   </body>
 </html>
