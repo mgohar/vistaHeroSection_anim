@@ -1937,7 +1937,7 @@ function onClick(event) {
     gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
     gsap.to(learnMore, { opacity: 0, duration: 0.6 });
     gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
-    interiorDetails.style.display = "block";
+    interiorDetails.style.display = "flex";
   }
 }
 
@@ -1975,5 +1975,5 @@ learnMore.addEventListener("click", () => {
   gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
   gsap.to(learnMore, { opacity: 0, duration: 0.6 });
   gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
-  interiorDetails.style.display = "block";
+  interiorDetails.style.display = "flex";
 });
