@@ -55,10 +55,16 @@
         cursor: pointer;
         z-index: 999
       }
-      .learnMore{
-        z-index: 999;
-        cursor: pointer;
-      }
+      .learnMore {
+    z-index: 999;
+    cursor: pointer;
+    position: absolute;
+    bottom: 60px;
+    left: calc(50% - 50px);
+    width: 100px;
+    background: red;
+    text-align: center;
+}
     </style>
   </head>
   <body>
@@ -71,7 +77,11 @@
         <div class="next"><img src="./src/assets/images/right_arrow.png"/></div>
       </div>
       <div class="heroSection">
-        <h1 class="interiorTitle"></h1>
+        <div id="interiorDetails">
+          <h1 id="interiorDetailHeading">adsfasfdsaf</h1>
+          <p id="interiorDetailParagraph">twrtret ertwret ret e tre rtre tre t t ret</p>
+        </div>
+        <h1 class="interiorTitle">Contemporary</h1>
         <canvas class="canvas"></canvas>
         <div class="learnMore">Continue</div>
       </div>

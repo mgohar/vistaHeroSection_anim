@@ -1592,8 +1592,29 @@ const InitLight = (bgScene) => {
 Init("without_light");
 InitLight("with_light");
 
-let interiorTitles = [{title:"Contemporary"},{title:"Scandinavian"},{title:"Modern"},{title:"Minimalist"}];
-
+let interiorTitles = [
+  {
+    title: "Contemporary",
+    para: "Explore innovative structures and avant-garde concepts that redefine modern living. Transform your space into a work of art, where every angle tells a story of progressive design.",
+  },
+  {
+    title: "Scandinavian",
+    para: "Embrace clean lines, natural materials, and a harmonious blend of functionality and style. Elevate your living spaces with the warmth and serenity of Nordic design.",
+  },
+  {
+    title: "Modern",
+    para: "Harmonizing timeless foundations with a modern flair, our modern architecture designs revel in the rich tapestry of diversity. Elevate your surroundings with pieces that seamlessly capture the vibrant spirit of the present, embracing the best of contemporary innovation.",
+  },
+  {
+    title: "Minimalist",
+    para: "Embrace the art of 'less is more' with clean, uncluttered aesthetics. Our Minimalist designs celebrate simplicity without compromising on style, creating serene spaces that resonate with modern sensibilities.",
+  },
+];
+var interiorTitleElem = document.querySelector(".interiorTitle");
+var interiorDetailHeading = document.querySelector("#interiorDetailHeading");
+var interiorDetailParagraph = document.querySelector(
+  "#interiorDetailParagraph"
+);
 
 //===================================================== Move Next
 const MoveNext = () => {
@@ -1603,8 +1624,10 @@ const MoveNext = () => {
     activeScene = 0;
   }
 
-  var interiorTitleElem = document.querySelector('.interiorTitle');
+  
   interiorTitleElem.textContent = interiorTitles[activeScene]?.title;
+  interiorDetailHeading.textContent = interiorTitles[activeScene]?.title;
+  interiorDetailParagraph.textContent = interiorTitles[activeScene]?.para;
 
   gsap.to(contemporary.position, {
     x: minimalist.position.x,
@@ -1670,8 +1693,10 @@ const MovePref = () => {
     activeScene = 3;
   }
 
-  var interiorTitleElem = document.querySelector('.interiorTitle');
+  var interiorTitleElem = document.querySelector(".interiorTitle");
   interiorTitleElem.textContent = interiorTitles[activeScene]?.title;
+  interiorDetailHeading.textContent = interiorTitles[activeScene]?.title;
+  interiorDetailParagraph.textContent = interiorTitles[activeScene]?.para;
 
   gsap.to(contemporary.position, {
     x: scandinavian.position.x,
@@ -1792,6 +1817,8 @@ activeScene = 0;
 // }, 5000);
 let nextbtn = document.querySelector(".next");
 let prevbtn = document.querySelector(".prev");
+let interiorDetails = document.querySelector("#interiorDetails");
+interiorDetails.style.display = "none";
 nextbtn.addEventListener("click", () => {
   setTimeout(() => {
     prevData = [];
@@ -1877,7 +1904,7 @@ const mouse2 = new THREE.Vector2();
 renderer.domElement.addEventListener("click", onClick);
 let back = document.querySelector(".back");
 let learnMore = document.querySelector(".learnMore");
-back.style.display="none"
+back.style.display = "none";
 function onClick(event) {
   // Calculate mouse2 coordinates
   const rect = renderer.domElement.getBoundingClientRect();
@@ -1896,23 +1923,57 @@ function onClick(event) {
   if (intersects.length > 0) {
     // The mouse2 click intersects with the cube
     // You can call your function here
-    back.style.display="flex"
-    gsap.to(witoutLightScenes[activeScene].position, {z: 2.3,x:0.8,duration: 1,});
-    gsap.to(lightScenes[activeScene].position, {z: 2.3,x:0.8,duration: 1,});
-    gsap.to(camera.position, {z: 6,duration: 1,});
+    back.style.display = "flex";
+    gsap.to(witoutLightScenes[activeScene].position, {
+      z: 2.3,
+      x: 0.8,
+      duration: 1,
+    });
+    gsap.to(ActiveBox.position, { z: 3, x: 0.8, duration: 1 });
+    gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0.8, duration: 1 });
+    gsap.to(camera.position, { z: 6, duration: 1 });
+
+    gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
+    gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
+    gsap.to(learnMore, { opacity: 0, duration: 0.6 });
+    gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
+    interiorDetails.style.display = "block";
   }
 }
 
-
-back.addEventListener("click",()=>{
-  back.style.display="none"
-    gsap.to(witoutLightScenes[activeScene].position, {z: 0,x:-0,duration: 1,});
-    gsap.to(lightScenes[activeScene].position, {z: 0,x:-0,duration: 1,});
-    gsap.to(camera.position, {z: 4.5,duration: 1,});
-})
-learnMore.addEventListener("click",()=>{
-    back.style.display="flex"
-    gsap.to(witoutLightScenes[activeScene].position, {z: 2.3,x:0.8,duration: 1,});
-    gsap.to(lightScenes[activeScene].position, {z: 2.3,x:0.8,duration: 1,});
-    gsap.to(camera.position, {z: 6,duration: 1,});
-})
+back.addEventListener("click", () => {
+  back.style.display = "none";
+  gsap.to(ActiveBox.position, { z: 1, x: -0, duration: 1 });
+  gsap.to(witoutLightScenes[activeScene].position, {
+    z: 0,
+    x: -0,
+    duration: 1,
+  });
+  gsap.to(lightScenes[activeScene].position, { z: 0, x: -0, duration: 1 });
+  gsap.to(camera.position, { z: 4.5, duration: 1 });
+  gsap.to(nextbtn, { opacity: 1, duration: 0.6 });
+  gsap.to(prevbtn, { opacity: 1, duration: 0.6 });
+  gsap.to(learnMore, { opacity: 1, duration: 0.6 });
+  gsap.to(interiorTitleElem, { opacity: 1, duration: 0.6 });
+  interiorDetails.style.display = "none";
+});
+learnMore.addEventListener("click", () => {
+  back.style.display = "flex";
+  gsap.to(ActiveBox.position, {
+    z: 3,
+    x: 0.8,
+    duration: 1,
+  });
+  gsap.to(witoutLightScenes[activeScene].position, {
+    z: 2.3,
+    x: 0.8,
+    duration: 1,
+  });
+  gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0.8, duration: 1 });
+  gsap.to(camera.position, { z: 6, duration: 1 });
+  gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
+  gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
+  gsap.to(learnMore, { opacity: 0, duration: 0.6 });
+  gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
+  interiorDetails.style.display = "block";
+});
