@@ -318,7 +318,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const contemporaryHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/half_Ball.png`
   );
   const contemporaryHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryHalfBallMat = new THREE.ShaderMaterial({
@@ -502,7 +502,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const minimalistHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/half_Ball.png`
   );
   const minimalistHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistHalfBallMat = new THREE.ShaderMaterial({
@@ -653,7 +653,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const modernHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/half_Ball.png`
   );
   const modernHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const modernHalfBallMat = new THREE.ShaderMaterial({
@@ -821,7 +821,7 @@ const Init = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const scandinavianHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/half_Ball.png`
   );
   const scandinavianHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const scandinavianHalfBallMat = new THREE.ShaderMaterial({
@@ -1039,7 +1039,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const contemporaryHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/contemporary/${bgScene}/half_Ball.png`
   );
   const contemporaryHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const contemporaryHalfBallMat = new THREE.ShaderMaterial({
@@ -1223,7 +1223,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const minimalistHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/minimalist/${bgScene}/half_Ball.png`
   );
   const minimalistHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const minimalistHalfBallMat = new THREE.ShaderMaterial({
@@ -1374,7 +1374,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const modernHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/modern/${bgScene}/half_Ball.png`
   );
   const modernHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const modernHalfBallMat = new THREE.ShaderMaterial({
@@ -1542,7 +1542,7 @@ const InitLight = (bgScene) => {
 
   //===================================================== CONTEPORARY Half Ball
   const scandinavianHalfBallTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/halfBall.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.3/src/assets/images/scandinavian/${bgScene}/half_Ball.png`
   );
   const scandinavianHalfBallGeo = new THREE.BoxGeometry(5, 0.5, 0);
   const scandinavianHalfBallMat = new THREE.ShaderMaterial({
@@ -1592,6 +1592,9 @@ const InitLight = (bgScene) => {
 Init("without_light");
 InitLight("with_light");
 
+let interiorTitles = [{title:"Contemporary"},{title:"Scandinavian"},{title:"Modern"},{title:"Minimalist"}];
+
+
 //===================================================== Move Next
 const MoveNext = () => {
   if (activeScene < 3) {
@@ -1599,7 +1602,10 @@ const MoveNext = () => {
   } else {
     activeScene = 0;
   }
-  console.log("activeScene:", activeScene);
+
+  var interiorTitleElem = document.querySelector('.interiorTitle');
+  interiorTitleElem.textContent = interiorTitles[activeScene]?.title;
+
   gsap.to(contemporary.position, {
     x: minimalist.position.x,
     y: minimalist.position.y,
@@ -1658,31 +1664,68 @@ const MoveNext = () => {
   });
 };
 const MovePref = () => {
-  gsap.to(elem1.position, {
-    x: elem4.position.x,
-    y: elem4.position.y,
-    z: elem4.position.z,
+  if (activeScene > 0) {
+    activeScene--;
+  } else {
+    activeScene = 3;
+  }
+
+  var interiorTitleElem = document.querySelector('.interiorTitle');
+  interiorTitleElem.textContent = interiorTitles[activeScene]?.title;
+
+  gsap.to(contemporary.position, {
+    x: scandinavian.position.x,
+    y: scandinavian.position.y,
+    z: scandinavian.position.z,
     duration: 1,
     ease: "power1.inOut",
   });
-  gsap.to(elem2.position, {
-    x: elem1.position.x,
-    y: elem1.position.y,
-    z: elem1.position.z,
+  gsap.to(scandinavian.position, {
+    x: modern.position.x,
+    y: modern.position.y,
+    z: modern.position.z,
     duration: 1,
     ease: "power1.inOut",
   });
-  gsap.to(elem3.position, {
-    x: elem2.position.x,
-    y: elem2.position.y,
-    z: elem2.position.z,
+  gsap.to(modern.position, {
+    x: minimalist.position.x,
+    y: minimalist.position.y,
+    z: minimalist.position.z,
     duration: 1,
     ease: "power1.inOut",
   });
-  gsap.to(elem4.position, {
-    x: elem3.position.x,
-    y: elem3.position.y,
-    z: elem3.position.z,
+  gsap.to(minimalist.position, {
+    x: contemporary.position.x,
+    y: contemporary.position.y,
+    z: contemporary.position.z,
+    duration: 1,
+    ease: "power1.inOut",
+  });
+  gsap.to(contemporaryL.position, {
+    x: scandinavianL.position.x,
+    y: scandinavianL.position.y,
+    z: scandinavianL.position.z,
+    duration: 1,
+    ease: "power1.inOut",
+  });
+  gsap.to(scandinavianL.position, {
+    x: modernL.position.x,
+    y: modernL.position.y,
+    z: modernL.position.z,
+    duration: 1,
+    ease: "power1.inOut",
+  });
+  gsap.to(modernL.position, {
+    x: minimalistL.position.x,
+    y: minimalistL.position.y,
+    z: minimalistL.position.z,
+    duration: 1,
+    ease: "power1.inOut",
+  });
+  gsap.to(minimalistL.position, {
+    x: contemporaryL.position.x,
+    y: contemporaryL.position.y,
+    z: contemporaryL.position.z,
     duration: 1,
     ease: "power1.inOut",
   });
@@ -1807,7 +1850,6 @@ window.addEventListener("mousemove", function (event) {
     // ElivateObjects("deskL", lightScenes[activeScene], 3, 0.5, 1.4, 0.2);
     ElivateObjects("plantL", lightScenes[activeScene], 4, 0.5, 1.2, 0.1);
   } else {
-    console.log("de");
     DeElivateObjects("ball1", 0.8);
     DeElivateObjects("bitBall", 0.8);
     DeElivateObjects("halfball", 0.8);
@@ -1834,6 +1876,7 @@ const mouse2 = new THREE.Vector2();
 // Add a click event listener to the renderer's domElement
 renderer.domElement.addEventListener("click", onClick);
 let back = document.querySelector(".back");
+let learnMore = document.querySelector(".learnMore");
 back.style.display="none"
 function onClick(event) {
   // Calculate mouse2 coordinates
@@ -1866,4 +1909,10 @@ back.addEventListener("click",()=>{
     gsap.to(witoutLightScenes[activeScene].position, {z: 0,x:-0,duration: 1,});
     gsap.to(lightScenes[activeScene].position, {z: 0,x:-0,duration: 1,});
     gsap.to(camera.position, {z: 4.5,duration: 1,});
+})
+learnMore.addEventListener("click",()=>{
+    back.style.display="flex"
+    gsap.to(witoutLightScenes[activeScene].position, {z: 2.3,x:0.8,duration: 1,});
+    gsap.to(lightScenes[activeScene].position, {z: 2.3,x:0.8,duration: 1,});
+    gsap.to(camera.position, {z: 6,duration: 1,});
 })
