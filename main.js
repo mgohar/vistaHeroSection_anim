@@ -1938,6 +1938,10 @@ function onClick(event) {
     gsap.to(learnMore, { opacity: 0, duration: 0.6 });
     gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
     interiorDetails.style.display = "flex";
+    setTimeout(() => {
+      nextbtn.style.display = "none";
+      prevbtn.style.display = "none";
+    }, 600);
   }
 }
 
@@ -1956,6 +1960,8 @@ back.addEventListener("click", () => {
   gsap.to(learnMore, { opacity: 1, duration: 0.6 });
   gsap.to(interiorTitleElem, { opacity: 1, duration: 0.6 });
   interiorDetails.style.display = "none";
+  nextbtn.style.display = "block";
+  prevbtn.style.display = "block";
 });
 learnMore.addEventListener("click", () => {
   back.style.display = "flex";
@@ -1976,4 +1982,8 @@ learnMore.addEventListener("click", () => {
   gsap.to(learnMore, { opacity: 0, duration: 0.6 });
   gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
   interiorDetails.style.display = "flex";
+  setTimeout(() => {
+    nextbtn.style.display = "none";
+    prevbtn.style.display = "none";
+  }, 600);
 });
