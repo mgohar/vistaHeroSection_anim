@@ -1980,48 +1980,52 @@ function onClick(event) {
     SwipeAudio();
     // The mouse2 click intersects with the cube
     // You can call your function here
-    Responsive(3000,()=>{
-      back.style.display = "flex";
-      gsap.to(witoutLightScenes[activeScene].position, {
-        z: 2.3,
-        x: 0.8,
-        duration: 1,
-      });
-      gsap.to(ActiveBox.position, { z: 3, x: 0.8, duration: 1 });
-      gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0.8, duration: 1 });
-      gsap.to(camera.position, { z: 6, duration: 1 });
+    if(window.innerWidth>576){
+      Responsive(3000,()=>{
+        back.style.display = "flex";
+        gsap.to(witoutLightScenes[activeScene].position, {
+          z: 2.3,
+          x: 0.8,
+          duration: 1,
+        });
+        gsap.to(ActiveBox.position, { z: 3, x: 0.8, duration: 1 });
+        gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0.8, duration: 1 });
+        gsap.to(camera.position, { z: 6, duration: 1 });
 
-      gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
-      gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
-      gsap.to(learnMore, { opacity: 0, duration: 0.6 });
-      gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
-      interiorDetails.style.display = "flex";
-      setTimeout(() => {
-        nextbtn.style.display = "none";
-        prevbtn.style.display = "none";
-      }, 600);
-    })
-    Responsive(769,()=>{
-      back.style.display = "flex";
-      gsap.to(witoutLightScenes[activeScene].position, {
-        z: 2.3,
-        x: 0,y:0.15,
-        duration: 1,
-      });
-      gsap.to(ActiveBox.position, { z: 3, x: 0,y:0.15, duration: 1 });
-      gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0,y:0.15, duration: 1 });
-      gsap.to(camera.position, { z: 6, duration: 1 });
+        gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
+        gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
+        gsap.to(learnMore, { opacity: 0, duration: 0.6 });
+        gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
+        interiorDetails.style.display = "flex";
+        setTimeout(() => {
+          nextbtn.style.display = "none";
+          prevbtn.style.display = "none";
+        }, 600);
+      })
+      Responsive(769,()=>{
+        back.style.display = "flex";
+        gsap.to(witoutLightScenes[activeScene].position, {
+          z: 2.3,
+          x: 0,y:0.15,
+          duration: 1,
+        });
+        gsap.to(ActiveBox.position, { z: 3, x: 0,y:0.15, duration: 1 });
+        gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0,y:0.15, duration: 1 });
+        gsap.to(camera.position, { z: 6, duration: 1 });
 
-      gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
-      gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
-      gsap.to(learnMore, { opacity: 0, duration: 0.6 });
-      gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
-      interiorDetails.style.display = "flex";
-      setTimeout(() => {
-        nextbtn.style.display = "none";
-        prevbtn.style.display = "none";
-      }, 600);
-    })
+        gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
+        gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
+        gsap.to(learnMore, { opacity: 0, duration: 0.6 });
+        gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
+        interiorDetails.style.display = "flex";
+        setTimeout(() => {
+          nextbtn.style.display = "none";
+          prevbtn.style.display = "none";
+        }, 600);
+      })
+    }else{
+      window.location.href = interiorTitles[activeScene]?.link;
+    }
   }
 }
 
@@ -2050,55 +2054,59 @@ back.addEventListener("click", () => {
 
 learnMore.addEventListener("click", () => {
   SwipeAudio();
-  Responsive(3000,()=>{
-    back.style.display = "flex";
-    gsap.to(ActiveBox.position, {
-      z: 3,
-      x: 0.8,
-      duration: 1,
-    });
-    gsap.to(witoutLightScenes[activeScene].position, {
-      z: 2.3,
-      x: 0.8,
-      duration: 1,
-    });
-    gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0.8, duration: 1 });
-    gsap.to(camera.position, { z: 6, duration: 1 });
-    gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
-    gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
-    gsap.to(learnMore, { opacity: 0, duration: 0.6 });
-    gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
-    interiorDetails.style.display = "flex";
-    setTimeout(() => {
-      nextbtn.style.display = "none";
-      prevbtn.style.display = "none";
-    }, 600);
-  })
-  Responsive(769,()=>{
-    back.style.display = "flex";
-    gsap.to(ActiveBox.position, {
-      z: 3,
-      x: 0,y:0.15,
-      duration: 1,
-    });
-    gsap.to(witoutLightScenes[activeScene].position, {
-      z: 2.3,
-      x: 0,y:0.15,
-      duration: 1,
-    });
-    gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0,y:0.15, duration: 1 });
-    gsap.to(camera.position, { z: 6, duration: 1 });
-    gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
-    gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
-    gsap.to(learnMore, { opacity: 0, duration: 0.6 });
-    gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
-    interiorDetails.style.display = "flex";
-    setTimeout(() => {
-      nextbtn.style.display = "none";
-      prevbtn.style.display = "none";
-    }, 600);
-  })
-  
+  if(window.innerWidth>576){
+    Responsive(3000,()=>{
+      back.style.display = "flex";
+      gsap.to(ActiveBox.position, {
+        z: 3,
+        x: 0.8,
+        duration: 1,
+      });
+      gsap.to(witoutLightScenes[activeScene].position, {
+        z: 2.3,
+        x: 0.8,
+        duration: 1,
+      });
+      gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0.8, duration: 1 });
+      gsap.to(camera.position, { z: 6, duration: 1 });
+      gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
+      gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
+      gsap.to(learnMore, { opacity: 0, duration: 0.6 });
+      gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
+      interiorDetails.style.display = "flex";
+      setTimeout(() => {
+        nextbtn.style.display = "none";
+        prevbtn.style.display = "none";
+      }, 600);
+    })
+    Responsive(769,()=>{
+      back.style.display = "flex";
+      gsap.to(ActiveBox.position, {
+        z: 3,
+        x: 0,y:0.15,
+        duration: 1,
+      });
+      gsap.to(witoutLightScenes[activeScene].position, {
+        z: 2.3,
+        x: 0,y:0.15,
+        duration: 1,
+      });
+      gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0,y:0.15, duration: 1 });
+      gsap.to(camera.position, { z: 6, duration: 1 });
+      gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
+      gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
+      gsap.to(learnMore, { opacity: 0, duration: 0.6 });
+      gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
+      interiorDetails.style.display = "flex";
+      setTimeout(() => {
+        nextbtn.style.display = "none";
+        prevbtn.style.display = "none";
+      }, 600);
+    })
+  }else{
+    window.location.href = interiorTitles[activeScene]?.link;
+
+  }
 });
 
 function SwipeAudio() {
