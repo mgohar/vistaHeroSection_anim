@@ -80,6 +80,13 @@ window.addEventListener("resize", function () {
   camera.updateProjectionMatrix();
 });
 
+//===================================================== Responsive
+const Responsive=(mediaquery,cd)=>{
+  console.log("window.innerWidth:",window.innerWidth);
+  if(window.innerWidth<=mediaquery){
+    cd();
+  }
+}
 //===================================================== Create a mesh
 
 //===================================================== Create a point light in our scene
@@ -846,6 +853,7 @@ const Init = (bgScene) => {
   // contemporary.position.y = "-0.532";
   scene.add(contemporary);
   contemporary.position.set(-0.05, -0.56, 0);
+
   // TControl(contemporary, "P");
 
   minimalist.position.set(-5.33, -0.92, -5.25);
@@ -1592,30 +1600,64 @@ const InitLight = (bgScene) => {
 
 Init("without_light");
 InitLight("with_light");
+Responsive(300,()=>{
+contemporary.scale.set(0.8, 0.8, 0.8);
+contemporaryL.scale.set(0.8, 0.8, 0.8);
+minimalist.scale.set(0.8, 0.8, 0.8);
+minimalistL.scale.set(0.8, 0.8, 0.8);
+modern.scale.set(0.8, 0.8, 0.8);
+modernL.scale.set(0.8, 0.8, 0.8);
+scandinavian.scale.set(0.8, 0.8, 0.8);
+scandinavianL.scale.set(0.8, 0.8, 0.8);
+})
+Responsive(769,()=>{
+contemporary.scale.set(0.7, 0.7, 0.7);
+contemporaryL.scale.set(0.7, 0.7, 0.7);
+minimalist.scale.set(0.7, 0.7, 0.7);
+minimalistL.scale.set(0.7, 0.7, 0.7);
+modern.scale.set(0.7, 0.7, 0.7);
+modernL.scale.set(0.7, 0.7, 0.7);
+scandinavian.scale.set(0.7, 0.7, 0.7);
+scandinavianL.scale.set(0.7, 0.7, 0.7);
+})
+Responsive(576,()=>{
+  contemporary.scale.set(0.6, 0.6, 0.6);
+  contemporaryL.scale.set(0.6, 0.6, 0.6);
+  minimalist.scale.set(0.6, 0.6, 0.6);
+  minimalistL.scale.set(0.6, 0.6, 0.6);
+  modern.scale.set(0.6, 0.6, 0.6);
+  modernL.scale.set(0.6, 0.6, 0.6);
+  scandinavian.scale.set(0.6, 0.6, 0.6);
+  scandinavianL.scale.set(0.6, 0.6, 0.6);
+})
+
 
 let interiorTitles = [
   {
     title: "Contemporary",
     para: "Explore innovative structures and avant-garde concepts that redefine modern living. Transform your space into a work of art, where every angle tells a story of progressive design.",
+    link:"https://levelupvista-buzz.webflow.io/contemporary"
   },
   {
     title: "Scandinavian",
     para: "Embrace clean lines, natural materials, and a harmonious blend of functionality and style. Elevate your living spaces with the warmth and serenity of Nordic design.",
+    link:"https://levelupvista-buzz.webflow.io/scandinavian"
   },
   {
     title: "Modern",
     para: "Harmonizing timeless foundations with a modern flair, our modern architecture designs revel in the rich tapestry of diversity. Elevate your surroundings with pieces that seamlessly capture the vibrant spirit of the present, embracing the best of contemporary innovation.",
+    link:"https://levelupvista-buzz.webflow.io/modren"
   },
   {
     title: "Minimalist",
     para: "Embrace the art of 'less is more' with clean, uncluttered aesthetics. Our Minimalist designs celebrate simplicity without compromising on style, creating serene spaces that resonate with modern sensibilities.",
+    link:"https://levelupvista-buzz.webflow.io/minimalist"
   },
 ];
 var interiorTitleElem = document.querySelector(".interiorTitle");
 var interiorDetailHeading = document.querySelector("#interiorDetailHeading");
-var interiorDetailParagraph = document.querySelector(
-  "#interiorDetailParagraph"
-);
+var interiorDetailParagraph = document.querySelector("#interiorDetailParagraph");
+var interiorDetailButton = document.querySelector(".inner-Button");
 
 //===================================================== Move Next
 const MoveNext = () => {
@@ -1629,6 +1671,7 @@ const MoveNext = () => {
   interiorTitleElem.textContent = interiorTitles[activeScene]?.title;
   interiorDetailHeading.textContent = interiorTitles[activeScene]?.title;
   interiorDetailParagraph.textContent = interiorTitles[activeScene]?.para;
+  interiorDetailButton.href = interiorTitles[activeScene]?.link;
 
   gsap.to(contemporary.position, {
     x: minimalist.position.x,
@@ -1698,6 +1741,7 @@ const MovePref = () => {
   interiorTitleElem.textContent = interiorTitles[activeScene]?.title;
   interiorDetailHeading.textContent = interiorTitles[activeScene]?.title;
   interiorDetailParagraph.textContent = interiorTitles[activeScene]?.para;
+  interiorDetailButton.href = interiorTitles[activeScene]?.link;
 
   gsap.to(contemporary.position, {
     x: scandinavian.position.x,
@@ -1933,18 +1977,93 @@ function onClick(event) {
   const intersects = raycaster2.intersectObject(ActiveBox);
 
   if (intersects.length > 0) {
+    SwipeAudio();
     // The mouse2 click intersects with the cube
     // You can call your function here
+    Responsive(3000,()=>{
+      back.style.display = "flex";
+      gsap.to(witoutLightScenes[activeScene].position, {
+        z: 2.3,
+        x: 0.8,
+        duration: 1,
+      });
+      gsap.to(ActiveBox.position, { z: 3, x: 0.8, duration: 1 });
+      gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0.8, duration: 1 });
+      gsap.to(camera.position, { z: 6, duration: 1 });
+
+      gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
+      gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
+      gsap.to(learnMore, { opacity: 0, duration: 0.6 });
+      gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
+      interiorDetails.style.display = "flex";
+      setTimeout(() => {
+        nextbtn.style.display = "none";
+        prevbtn.style.display = "none";
+      }, 600);
+    })
+    Responsive(769,()=>{
+      back.style.display = "flex";
+      gsap.to(witoutLightScenes[activeScene].position, {
+        z: 2.3,
+        x: 0,y:0.15,
+        duration: 1,
+      });
+      gsap.to(ActiveBox.position, { z: 3, x: 0,y:0.15, duration: 1 });
+      gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0,y:0.15, duration: 1 });
+      gsap.to(camera.position, { z: 6, duration: 1 });
+
+      gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
+      gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
+      gsap.to(learnMore, { opacity: 0, duration: 0.6 });
+      gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
+      interiorDetails.style.display = "flex";
+      setTimeout(() => {
+        nextbtn.style.display = "none";
+        prevbtn.style.display = "none";
+      }, 600);
+    })
+  }
+}
+
+back.addEventListener("click", () => {
+  SwipeAudio();
+  Responsive(3000,()=>{
+    back.style.display = "none";
+    gsap.to(ActiveBox.position, { z: 1, x: -0,y:-0.56, duration: 1 });
+    gsap.to(witoutLightScenes[activeScene].position, {
+      z: 0,
+      x: -0,y:-0.56,
+      duration: 1,
+    });
+    gsap.to(lightScenes[activeScene].position, { z: 0, x: -0,y:-0.56, duration: 1 });
+    gsap.to(camera.position, { z: 4.5, duration: 1 });
+    gsap.to(nextbtn, { opacity: 1, duration: 0.6 });
+    gsap.to(prevbtn, { opacity: 1, duration: 0.6 });
+    gsap.to(learnMore, { opacity: 1, duration: 0.6 });
+    gsap.to(interiorTitleElem, { opacity: 1, duration: 0.6 });
+    interiorDetails.style.display = "none";
+    nextbtn.style.display = "block";
+    prevbtn.style.display = "block";
+  })
+  
+});
+
+learnMore.addEventListener("click", () => {
+  SwipeAudio();
+  Responsive(3000,()=>{
     back.style.display = "flex";
+    gsap.to(ActiveBox.position, {
+      z: 3,
+      x: 0.8,
+      duration: 1,
+    });
     gsap.to(witoutLightScenes[activeScene].position, {
       z: 2.3,
       x: 0.8,
       duration: 1,
     });
-    gsap.to(ActiveBox.position, { z: 3, x: 0.8, duration: 1 });
     gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0.8, duration: 1 });
     gsap.to(camera.position, { z: 6, duration: 1 });
-
     gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
     gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
     gsap.to(learnMore, { opacity: 0, duration: 0.6 });
@@ -1954,50 +2073,32 @@ function onClick(event) {
       nextbtn.style.display = "none";
       prevbtn.style.display = "none";
     }, 600);
-  }
-}
-
-back.addEventListener("click", () => {
-  back.style.display = "none";
-  gsap.to(ActiveBox.position, { z: 1, x: -0, duration: 1 });
-  gsap.to(witoutLightScenes[activeScene].position, {
-    z: 0,
-    x: -0,
-    duration: 1,
-  });
-  gsap.to(lightScenes[activeScene].position, { z: 0, x: -0, duration: 1 });
-  gsap.to(camera.position, { z: 4.5, duration: 1 });
-  gsap.to(nextbtn, { opacity: 1, duration: 0.6 });
-  gsap.to(prevbtn, { opacity: 1, duration: 0.6 });
-  gsap.to(learnMore, { opacity: 1, duration: 0.6 });
-  gsap.to(interiorTitleElem, { opacity: 1, duration: 0.6 });
-  interiorDetails.style.display = "none";
-  nextbtn.style.display = "block";
-  prevbtn.style.display = "block";
-});
-learnMore.addEventListener("click", () => {
-  back.style.display = "flex";
-  gsap.to(ActiveBox.position, {
-    z: 3,
-    x: 0.8,
-    duration: 1,
-  });
-  gsap.to(witoutLightScenes[activeScene].position, {
-    z: 2.3,
-    x: 0.8,
-    duration: 1,
-  });
-  gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0.8, duration: 1 });
-  gsap.to(camera.position, { z: 6, duration: 1 });
-  gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
-  gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
-  gsap.to(learnMore, { opacity: 0, duration: 0.6 });
-  gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
-  interiorDetails.style.display = "flex";
-  setTimeout(() => {
-    nextbtn.style.display = "none";
-    prevbtn.style.display = "none";
-  }, 600);
+  })
+  Responsive(769,()=>{
+    back.style.display = "flex";
+    gsap.to(ActiveBox.position, {
+      z: 3,
+      x: 0,y:0.15,
+      duration: 1,
+    });
+    gsap.to(witoutLightScenes[activeScene].position, {
+      z: 2.3,
+      x: 0,y:0.15,
+      duration: 1,
+    });
+    gsap.to(lightScenes[activeScene].position, { z: 2.3, x: 0,y:0.15, duration: 1 });
+    gsap.to(camera.position, { z: 6, duration: 1 });
+    gsap.to(nextbtn, { opacity: 0, duration: 0.6 });
+    gsap.to(prevbtn, { opacity: 0, duration: 0.6 });
+    gsap.to(learnMore, { opacity: 0, duration: 0.6 });
+    gsap.to(interiorTitleElem, { opacity: 0, duration: 0.6 });
+    interiorDetails.style.display = "flex";
+    setTimeout(() => {
+      nextbtn.style.display = "none";
+      prevbtn.style.display = "none";
+    }, 600);
+  })
+  
 });
 
 function SwipeAudio() {

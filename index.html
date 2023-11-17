@@ -17,15 +17,15 @@
         min-width: 100%;
         min-height: 100%;
       }
-      .p-relative{
+      .p-relative {
         position: relative;
       }
-      .canvas{
+      .canvas {
         position: absolute;
         top: 0px;
         z-index: 999;
       }
-      .btnContainer{
+      .btnContainer {
         position: absolute;
         top: calc(50vh - 25px);
         height: 0px;
@@ -35,82 +35,98 @@
         justify-content: space-between;
         z-index: 999999999;
       }
-      .prev{
+      .prev {
         padding-left: 150px;
         cursor: pointer;
       }
-      .next{
+      .next {
         padding-right: 150px;
         cursor: pointer;
       }
-      .heroSection{
+      .heroSection {
         position: relative;
         height: 100vh;
       }
-      .back{
+      .back {
         position: absolute;
         bottom: 50px;
-        right:50px;
+        right: 50px;
         cursor: pointer;
-        z-index: 999
+        z-index: 999;
       }
       .learnMore {
-    z-index: 999;
-    cursor: pointer;
-    position: absolute;
-    bottom: 40px;
-    font-size: 16px!important;
-    left: calc(50% - 50px);
-    border: 1px solid black;
-    padding: 0px 40px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    color: black;
-}
-.inner-Button {
-    z-index: 999999;
-    cursor: pointer;
-    left: calc(50% - 50px);
-    border: 1px solid black;
-    padding: 0px 40px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    color: black;
-    text-decoration: none;
-    font-size: 16px!important;
-}
-.interiorTitle {
-    font-size: 60px;
-    font-weight: 300;
-    line-height: 60px;
-    font-family: 'League Spartan';
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 80px;
-    text-shadow: 5px 5px 15px #FFFFFF;
-}
-#interiorDetails {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    font-family:'League Spartan';
-    color: black;
-    row-gap: 20px!important;
-    padding: 60px;
-    font-weight: 300;
-    height: 80vh;
-    width: 30%;
-}
+        z-index: 999;
+        cursor: pointer;
+        position: absolute;
+        bottom: 40px;
+        font-size: 16px !important;
+        left: calc(50% - 50px);
+        border: 1px solid black;
+        padding: 0px 40px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        color: black;
+      }
+      .inner-Button {
+        z-index: 999999;
+        cursor: pointer;
+        left: calc(50% - 50px);
+        border: 1px solid black;
+        padding: 0px 40px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        color: black;
+        text-decoration: none;
+        font-size: 16px !important;
+      }
+      .interiorTitle {
+        font-size: 60px;
+        font-weight: 300;
+        line-height: 60px;
+        font-family: "League Spartan";
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 80px;
+        text-shadow: 5px 5px 15px #ffffff;
+      }
+      #interiorDetails {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        font-family: "League Spartan";
+        color: black;
+        row-gap: 20px !important;
+        padding: 60px;
+        font-weight: 300;
+        height: 80vh;
+        width: 30%;
+      }
+      @media screen and (max-width: 769px) {
+        .prev {
+          padding-left: 20px;
+        }
+        .next {
+          padding-right: 20px;
+        }
+        .learnMore{
+          bottom: 80px;
+        }
+        #interiorDetails{
+          position: relative;
+          top: 220px;
+          width: 80%!important;
+        }
+      }
     </style>
   </head>
   <body>
@@ -130,6 +146,7 @@
           <p id="interiorDetailParagraph">
             twrtret ertwret ret e tre rtre tre t t ret
           </p>
+          <a class="inner-Button">Explore</a>
         </div>
         <h1 class="interiorTitle">Contemporary</h1>
         <canvas class="canvas"></canvas>
@@ -137,20 +154,27 @@
       </div>
       <div class="back">Back</div>
       <audio id="SwipeAudio">
-        <source src="https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.11/src/assets/Music/whoosh_edit.mp3" type="audio/mp3" />
+        <source
+          src="https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.11/src/assets/Music/whoosh_edit.mp3"
+          type="audio/mp3"
+        />
       </audio>
       <audio id="LightAudio">
-        <source src="https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.11/src/assets/Music/light-switch.mp3" type="audio/mp3" />
+        <source
+          src="https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.11/src/assets/Music/light-switch.mp3"
+          type="audio/mp3"
+        />
       </audio>
       <audio id="BGAudio">
-        <source src="https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.11/src/assets/Music/maditation.mp3" type="audio/mp3" />
+        <source
+          src="https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.11/src/assets/Music/maditation.mp3"
+          type="audio/mp3"
+        />
       </audio>
-      
     </div>
     <script type="module" src="/main.js"></script>
     <script>
       // Function to play the audio
-      
     </script>
   </body>
 </html>
