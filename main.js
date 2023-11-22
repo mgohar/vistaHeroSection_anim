@@ -1636,22 +1636,22 @@ let interiorTitles = [
   {
     title: "Contemporary",
     para: "Explore innovative structures and avant-garde concepts that redefine modern living. Transform your space into a work of art, where every angle tells a story of progressive design.",
-    link:"https://levelupvista-buzz.webflow.io/contemporary"
+    link:"https://www.levelupvista.com/contemporary"
   },
   {
     title: "Scandinavian",
     para: "Embrace clean lines, natural materials, and a harmonious blend of functionality and style. Elevate your living spaces with the warmth and serenity of Nordic design.",
-    link:"https://levelupvista-buzz.webflow.io/scandinavian"
+    link:"https://www.levelupvista.com/scandinavian"
   },
   {
     title: "Modern",
     para: "Harmonizing timeless foundations with a modern flair, our modern architecture designs revel in the rich tapestry of diversity. Elevate your surroundings with pieces that seamlessly capture the vibrant spirit of the present, embracing the best of contemporary innovation.",
-    link:"https://levelupvista-buzz.webflow.io/modren"
+    link:"https://www.levelupvista.com/modren"
   },
   {
     title: "Minimalist",
     para: "Embrace the art of 'less is more' with clean, uncluttered aesthetics. Our Minimalist designs celebrate simplicity without compromising on style, creating serene spaces that resonate with modern sensibilities.",
-    link:"https://levelupvista-buzz.webflow.io/minimalist"
+    link:"https://www.levelupvista.com/minimalist"
   },
 ];
 var interiorTitleElem = document.querySelector(".interiorTitle");
