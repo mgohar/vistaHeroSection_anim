@@ -1865,16 +1865,16 @@ let prevbtn = document.querySelector(".prev");
 let interiorDetails = document.querySelector("#interiorDetails");
 interiorDetails.style.display = "none";
 nextbtn.addEventListener("click", () => {
-  setTimeout(() => {
+  debounce(function () {
     prevData = [];
     MoveNext();
     SwipeAudio();
-  }, 300);
+  },2000)
 });
 prevbtn.addEventListener("click", () => {
   setTimeout(() => {
     prevData = [];
-    MovePref();
+    debounce(MovePref,2000)
     SwipeAudio()
   }, 300);
 });
@@ -2122,4 +2122,20 @@ function LightAudio() {
 function BGAudio() {
   var audio = document.getElementById("BGAudio");
   audio.play();
+}
+
+let toggleExecution=1;
+function debounce(func, delay) {
+  let timeoutId;
+  
+  if(toggleExecution==1){
+    func();
+    toggleExecution=0;
+    console.log("toggleExecution",toggleExecution);
+    setTimeout(function() {
+      toggleExecution=1;
+      console.log("toggleExecution",toggleExecution);
+    }, 1500);
+  }
+ 
 }
