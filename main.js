@@ -163,7 +163,7 @@ const Init = (bgScene) => {
   //===================================================== CONTEPORARY PODIUM
   contemporary = new THREE.Group();
   const contemporaryPodiumTexture = new THREE.TextureLoader().load(
-    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.6/src/assets/images/contemporary/${bgScene}/podium.png`
+    `https://cdn.jsdelivr.net/gh/mgohar/vistaHeroSection_anim@0.0.6/src/assets/images/contemporary/${bgScene}/shadowPodium.png`
   );
   const contemporaryPodiumGeo = new THREE.BoxGeometry(6, 0.5, 0);
   const contemporaryPodiumMat = new THREE.ShaderMaterial({
